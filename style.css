@@ -106,6 +106,10 @@ hr {
 
 .update {
     border: 2px dashed #ff0000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
 .warning {
     border: 2px solid #ff9900;
     background: #1a0f00;
@@ -122,5 +126,4 @@ hr {
 
 .content li, .warning li {
     margin-bottom: 8px;
-}
 }
