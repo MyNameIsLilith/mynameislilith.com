@@ -7,7 +7,6 @@
 body {
     font-family: 'Courier New', monospace;
     background-color: #0a0a0a;
-    /* Tutaj magia: przyciemniamy siatkę o 90%, żeby była tylko subtelną fakturą */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bg1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -23,6 +22,152 @@ body {
     border-right: 1px solid #333;
 }
 
+/* ===== RESPONSYWNOŚĆ - TELEFONY (<768px) ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+        border-left: none;
+        border-right: none;
+        max-width: 100%;
+        /* Lepsza wydajność tła na telefonie */
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        /* Zapobiega wychodzeniu poza ekran */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    header {
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+        padding: 5px 0;
+        /* Większy obszur klikalny dla palca */
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        padding-left: 8px;
+    }
+
+    pre {
+        padding: 15px 10px;
+        font-size: 0.95rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Płynne scrollowanie na iOS */
+    }
+
+    footer {
+        margin-top: 35px;
+        padding-top: 15px;
+        font-size: 0.85rem;
+    }
+
+    .small {
+        font-size: 0.75rem;
+    }
+
+    .update, .warning {
+        padding: 12px;
+    }
+
+    .content ul, .warning ul {
+        margin-left: 15px;
+        padding-left: 5px;
+    }
+
+    .content li, .warning li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    /* ===== SPECJALNE STYLE DLA STRONY BOOK ===== */
+    .download-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .download-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .btn-download, .btn-read {
+        padding: 16px 12px;
+        font-size: 1rem;
+        min-height: 50px; /* Minimalna wysokość dla dotyku */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .btn-download {
+        font-size: 1.1rem;
+    }
+
+    .book-info {
+        padding: 15px;
+        margin: 10px 5px;
+    }
+
+    .book-hero {
+        padding: 25px 10px;
+        margin-bottom: 30px;
+    }
+
+    .book-hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .book-hero p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== STYLE OGÓLNE (powyżej 768px) ===== */
 header {
     border-bottom: 2px solid #ff0000;
     padding-bottom: 20px;
@@ -132,4 +277,56 @@ hr {
 
 .content li, .warning li {
     margin-bottom: 8px;
+}
+
+/* ===== STYLE DLA STRONY BOOK ===== */
+.book-hero {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #ff0000;
+    margin-bottom: 40px;
+}
+
+.download-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.download-card {
+    background: #111;
+    border: 2px solid #333;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.btn-download {
+    display: block;
+    background: #ff0000;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-read {
+    display: block;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 12px;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.book-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #0a0a0a;
+    border: 1px solid #333;
 }
