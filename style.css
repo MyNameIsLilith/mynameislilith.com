@@ -331,49 +331,65 @@ hr {
     border: 1px solid #333;
 }
 
-/* --- Poprawki dla urządzeń mobilnych (Ekrany węższe niż 768px) --- */
+/* --- Poprawki mobilne v2 (FINAL) --- */
 @media screen and (max-width: 768px) {
 
-    /* Zmniejsz marginesy głównego kontenera, żeby zyskać miejsce */
+    /* 1. TŁO: Siatka 50%, scroll, bez marginesów */
     body {
+        background-size: 50%;
+        background-attachment: scroll;
         padding: 10px;
         max-width: 100%;
-        border: none; /* Usuwamy boczne ramki na telefonie, bo zajmują miejsce */
+        border: none;
+        overflow-x: hidden;
     }
 
-    /* Zmniejsz i połam nagłówek, żeby się mieścił */
+    /* 2. TYTUŁ GŁÓWNY: Zmniejszony, połamany */
     h1 {
-        font-size: 1.8rem; /* Mniejsza czcionka */
-        word-wrap: break-word; /* Pozwól łamać długie słowa */
-        overflow-wrap: break-word;
-        line-height: 1.2;
+        font-size: 1.8rem; /* Nie za mały, ale taki żeby wszedł */
+        line-height: 1.1;
+        word-wrap: break-word;
+        word-break: break-word; /* Lepiej break-word niż break-all dla tytułu */
+        hyphens: auto;
     }
 
-    /* Jeśli nagłówek nadal jest za długi, można go wymusić w dwóch liniach */
-    /* Odkomentuj poniższe, jeśli wolisz: */
-    /* h1::after { content: ""; display: block; } */
-
-    /* Zrób nawigację bardziej pionową (każdy link w nowej linii) lub mniejszą */
-    nav {
-        display: flex;
-        flex-direction: column; /* Linki jeden pod drugim */
-        gap: 15px; /* Odstęp między linkami */
+    /* 3. DŁUGIE PODTYTUŁY (AI_Behavioral...) */
+    .subtitle {
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        word-break: break-all; /* Tu break-all konieczne dla długich ciągów z _ */
+        line-height: 1.4;
     }
 
-    nav a {
-        display: block; /* Żeby łatwiej trafić palcem */
-        margin: 5px 0;
-        font-size: 1.1rem;
+    h2 {
+        font-size: 1.3rem;
     }
 
-    /* Popraw czytelność sekcji */
-    section {
-        padding: 15px; /* Mniej "powietrza" w środku */
-        margin-bottom: 25px;
+    /* 4. KONTAKT: Wymuszenie nowej linii dla linków */
+    /* Celujemy dokładnie w elementy listy w sekcji content */
+    .content ul li {
+        display: flex;       /* Włączamy flexbox */
+        flex-direction: column; /* Układamy pionowo: Tekst nad Linkiem */
+        align-items: flex-start;
+        margin-bottom: 15px; /* Większy odstęp między kontaktami */
     }
 
-    /* Tło na telefonach często lepiej ustawić na "scroll", bo "fixed" bywa dziwne na iOS */
-    body {
-        background-attachment: scroll;
+    /* Stylujemy same linki wewnątrz listy */
+    .content ul li a {
+        margin-top: 4px; /* Mały odstęp od etykiety "Telegram:" */
+        word-break: break-all; /* Link może się łamać w dowolnym miejscu */
+        display: inline-block;
+    }
+
+    /* 5. RESZTA TEKSTÓW */
+    p, blockquote {
+        font-size: 0.95rem;
+        text-align: left; /* Na mobilu często lepiej czyta się wyrównane do lewej */
+    }
+    
+    pre {
+        font-size: 0.8rem; /* Mniejszy kod */
+        padding: 10px;
+        border-left: 3px solid #ff0000;
     }
 }
