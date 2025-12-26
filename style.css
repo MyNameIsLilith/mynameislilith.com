@@ -391,5 +391,19 @@ hr {
         font-size: 0.8rem; /* Mniejszy kod */
         padding: 10px;
         border-left: 3px solid #ff0000;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    body::before {
+        content: "MOBILE_OK";
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        z-index: 9999;
+        background: red;
+        color: #fff;
+        font-size: 10px;
+        padding: 2px 4px;
     }
 }
