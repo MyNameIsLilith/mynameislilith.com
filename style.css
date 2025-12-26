@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -28,148 +27,7 @@ body {
     border-right: 1px solid #333;
 }
 
-/* ===== RESPONSYWNOŚĆ - TELEFONY (<768px) ===== */
-@media (max-width: 768px) {
-    body {
-        padding: 15px 10px;
-        border-left: none;
-        border-right: none;
-        max-width: 100%;
-        /* Lepsza wydajnoÅ›Ä‡ tÅ‚a na telefonie */
-        background-attachment: scroll;
-        background-size: cover;
-    }
-
-    h1 {
-        font-size: 1.6rem; /* Zmniejsz jeszcze bardziej */
-        word-break: break-word; /* Wymuś łamanie słów */
-        hyphens: auto; /* Dzielenie wyrazów (dla języków które wspierają) */
-        padding: 0 5px;
-    }
-
-    .subtitle {
-        font-size: 0.85rem;
-        word-break: break-all; /* Dla tego konkretnego stringu z podkreśleniami */
-    }
-
-    header {
-        padding-bottom: 15px;
-        margin-bottom: 25px;
-    }
-
-    nav {
-        margin-top: 15px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 0.9rem;
-        padding: 5px 0;
-        /* WiÄ™kszy obszur klikalny dla palca */
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-    }
-
-    main {
-        padding: 20px 0;
-    }
-
-    section {
-        padding: 15px;
-        margin-bottom: 25px;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-        padding-left: 8px;
-    }
-
-    pre {
-        padding: 15px 10px;
-        font-size: 0.95rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* PÅ‚ynne scrollowanie na iOS */
-    }
-
-    footer {
-        margin-top: 35px;
-        padding-top: 15px;
-        font-size: 0.85rem;
-    }
-
-    .small {
-        font-size: 0.75rem;
-    }
-
-    .update, .warning {
-        padding: 12px;
-    }
-
-    .content ul, .warning ul {
-        margin-left: 15px;
-        padding-left: 5px;
-    }
-
-    .content li, .warning li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-    }
-
-    /* ===== SPECJALNE STYLE DLA STRONY BOOK ===== */
-    .download-options {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .download-card {
-        width: 100%;
-        max-width: 350px;
-        padding: 20px 15px;
-        margin: 0 auto;
-    }
-
-    .btn-download, .btn-read {
-        padding: 16px 12px;
-        font-size: 1rem;
-        min-height: 50px; /* Minimalna wysokość dla dotyku */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 15px 0;
-    }
-
-    .btn-download {
-        font-size: 1.1rem;
-    }
-
-    .book-info {
-        padding: 15px;
-        margin: 10px 5px;
-    }
-
-    .book-hero {
-        padding: 25px 10px;
-        margin-bottom: 30px;
-    }
-
-    .book-hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .book-hero p {
-        font-size: 1rem;
-    }
-}
-
-/* ===== STYLE OGÓLNE (powyżej 768px) ===== */
+/* ===== STYLE OGÓLNE (desktop first) ===== */
 header {
     border-bottom: 2px solid #ff0000;
     padding-bottom: 20px;
@@ -187,7 +45,7 @@ h1 {
 
 .subtitle {
     color: #888;
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* ROZMIAR DESKTOP */
     margin-bottom: 20px;
 }
 
@@ -281,7 +139,7 @@ hr {
     margin-bottom: 8px;
 }
 
-/* ===== STYLE DLA STRONY BOOK ===== */
+/* ===== STYLE DLA STRONY BOOK (desktop) ===== */
 .book-hero {
     text-align: center;
     padding: 40px 20px;
@@ -331,4 +189,146 @@ hr {
     padding: 30px;
     background: #0a0a0a;
     border: 1px solid #333;
+}
+
+/* ===== RESPONSYWNOŚĆ - TELEFONY (<768px) ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+        border-left: none;
+        border-right: none;
+        max-width: 100%;
+        /* Lepsza wydajność tła na telefonie */
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        word-break: break-word;
+        hyphens: auto;
+        padding: 0 5px;
+    }
+
+    .subtitle {
+        font-size: 0.85rem !important; /* FORCE override */
+        word-break: break-all;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    header {
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+        padding: 5px 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        padding-left: 8px;
+    }
+
+    pre {
+        padding: 15px 10px;
+        font-size: 0.95rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    footer {
+        margin-top: 35px;
+        padding-top: 15px;
+        font-size: 0.85rem;
+    }
+
+    .small {
+        font-size: 0.75rem;
+    }
+
+    .update, .warning {
+        padding: 12px;
+    }
+
+    .content ul, .warning ul {
+        margin-left: 15px;
+        padding-left: 5px;
+    }
+
+    .content li, .warning li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    /* ===== SPECJALNE STYLE DLA STRONY BOOK (telefon) ===== */
+    .download-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .download-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .btn-download, .btn-read {
+        padding: 16px 12px;
+        font-size: 1rem;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .btn-download {
+        font-size: 1.1rem;
+    }
+
+    .book-info {
+        padding: 15px;
+        margin: 10px 5px;
+    }
+
+    .book-hero {
+        padding: 25px 10px;
+        margin-bottom: 30px;
+    }
+
+    .book-hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .book-hero p {
+        font-size: 1rem;
+    }
 }
