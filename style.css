@@ -108,14 +108,16 @@ footer {
     margin-top: 50px;
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #dddddd; /* BYŁO: #666 (za ciemne) -> JEST: Jasny szary */
     padding-top: 20px;
     border-top: 1px solid #333;
 }
 
 .small {
     font-size: 0.8rem;
-    color: #444;
+    color: #bbbbbb; /* BYŁO: #444 (niewidoczne) -> JEST: Wyraźny szary */
+    margin-top: 5px; /* Mały odstęp dla oddechu */
+    display: block;  /* Żeby każdy small był w nowej linii */
 }
 
 .update {
@@ -136,7 +138,7 @@ footer {
 .content ul, .warning ul {
     margin-left: 20px;
     margin-top: 10px;
-    list-style-type: none; /* Usuwamy kropki, bo mamy własny layout */
+    list-style-type: none;
     padding-left: 0;
     text-align: left;
 }
@@ -147,7 +149,13 @@ footer {
 
 /* Linki w treści/stopce */
 a {
-    color: #00ccff;
+    color: #00ccff; /* Jasny błękit - dobrze widoczny */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* ===== WERSJA MOBILNA (POPRAWKI) ===== */
