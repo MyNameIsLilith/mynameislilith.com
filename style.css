@@ -330,3 +330,50 @@ hr {
     background: #0a0a0a;
     border: 1px solid #333;
 }
+
+/* --- Poprawki dla urządzeń mobilnych (Ekrany węższe niż 768px) --- */
+@media screen and (max-width: 768px) {
+
+    /* Zmniejsz marginesy głównego kontenera, żeby zyskać miejsce */
+    body {
+        padding: 10px;
+        max-width: 100%;
+        border: none; /* Usuwamy boczne ramki na telefonie, bo zajmują miejsce */
+    }
+
+    /* Zmniejsz i połam nagłówek, żeby się mieścił */
+    h1 {
+        font-size: 1.8rem; /* Mniejsza czcionka */
+        word-wrap: break-word; /* Pozwól łamać długie słowa */
+        overflow-wrap: break-word;
+        line-height: 1.2;
+    }
+
+    /* Jeśli nagłówek nadal jest za długi, można go wymusić w dwóch liniach */
+    /* Odkomentuj poniższe, jeśli wolisz: */
+    /* h1::after { content: ""; display: block; } */
+
+    /* Zrób nawigację bardziej pionową (każdy link w nowej linii) lub mniejszą */
+    nav {
+        display: flex;
+        flex-direction: column; /* Linki jeden pod drugim */
+        gap: 15px; /* Odstęp między linkami */
+    }
+
+    nav a {
+        display: block; /* Żeby łatwiej trafić palcem */
+        margin: 5px 0;
+        font-size: 1.1rem;
+    }
+
+    /* Popraw czytelność sekcji */
+    section {
+        padding: 15px; /* Mniej "powietrza" w środku */
+        margin-bottom: 25px;
+    }
+
+    /* Tło na telefonach często lepiej ustawić na "scroll", bo "fixed" bywa dziwne na iOS */
+    body {
+        background-attachment: scroll;
+    }
+}
