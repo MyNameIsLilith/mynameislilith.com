@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 body {
     font-family: 'Courier New', monospace;
     background-color: #0a0a0a;
@@ -23,7 +28,7 @@ body {
     border-right: 1px solid #333;
 }
 
-/* ===== RESPONSYWNOÅšÄ† - TELEFONY (<768px) ===== */
+/* ===== RESPONSYWNOŚĆ - TELEFONY (<768px) ===== */
 @media (max-width: 768px) {
     body {
         padding: 15px 10px;
@@ -36,19 +41,15 @@ body {
     }
 
     h1 {
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
-        line-height: 1.3;
-        /* Zapobiega wychodzeniu poza ekran */
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        font-size: 1.6rem; /* Zmniejsz jeszcze bardziej */
+        word-break: break-word; /* Wymuś łamanie słów */
+        hyphens: auto; /* Dzielenie wyrazów (dla języków które wspierają) */
+        padding: 0 5px;
     }
 
     .subtitle {
-        font-size: 0.95rem;
-        line-height: 1.4;
-        margin-bottom: 15px;
+        font-size: 0.85rem;
+        word-break: break-all; /* Dla tego konkretnego stringu z podkreśleniami */
     }
 
     header {
@@ -137,7 +138,7 @@ body {
     .btn-download, .btn-read {
         padding: 16px 12px;
         font-size: 1rem;
-        min-height: 50px; /* Minimalna wysokoÅ›Ä‡ dla dotyku */
+        min-height: 50px; /* Minimalna wysokość dla dotyku */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -168,7 +169,7 @@ body {
     }
 }
 
-/* ===== STYLE OGÃ“LNE (powyÅ¼ej 768px) ===== */
+/* ===== STYLE OGÓLNE (powyżej 768px) ===== */
 header {
     border-bottom: 2px solid #ff0000;
     padding-bottom: 20px;
@@ -177,7 +178,7 @@ header {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #ff0000;
     text-transform: none;
     letter-spacing: 2px;
@@ -186,7 +187,7 @@ h1 {
 
 .subtitle {
     color: #888;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
