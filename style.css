@@ -1,0 +1,210 @@
+/* ===== RESET I BAZA ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    /* Tło desktop: stałe, wycentrowane */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #00ff00;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+/* ===== TYPOGRAFIA I NAGŁÓWKI ===== */
+header {
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #ff0000;
+    text-transform: none;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Zabezpieczenie na wszelki wypadek */
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+h2 {
+    color: #ff5500;
+    margin-bottom: 15px;
+    border-left: 3px solid #ff0000;
+    padding-left: 10px;
+}
+
+/* ===== NAWIGACJA ===== */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+/* ===== GŁÓWNA TREŚĆ ===== */
+main {
+    padding: 30px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #111;
+    border: 1px solid #333;
+}
+
+pre {
+    background: #000;
+    padding: 20px;
+    border-left: 5px solid #ff0000;
+    overflow-x: auto;
+    margin: 20px 0;
+    color: #00ccff;
+    font-size: 1.1rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* ===== STOPKA I DODATKI ===== */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.small {
+    font-size: 0.8rem;
+    color: #444;
+}
+
+.update {
+    border: 2px dashed #ff0000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.warning {
+    border: 2px solid #ff9900;
+    background: #1a0f00;
+}
+
+.warning h2 {
+    color: #ff9900;
+}
+
+.content ul, .warning ul {
+    margin-left: 20px;
+    margin-top: 10px;
+    list-style-type: none; /* Usuwamy kropki, bo mamy własny layout */
+    padding-left: 0;
+    text-align: left;
+}
+
+.content li, .warning li {
+    margin-bottom: 12px;
+}
+
+/* Linki w treści/stopce */
+a {
+    color: #00ccff;
+}
+
+/* ===== WERSJA MOBILNA (POPRAWKI) ===== */
+@media screen and (max-width: 768px) {
+    body {
+        /* Tło: Scrolluje razem ze stroną (nie zoomuje się dziwnie jak fixed) */
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover; 
+        
+        padding: 10px;
+        border: none;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* TYTUŁ: Mniejszy, żeby się mieścił */
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    /* PODTYTUŁ: Łamanie długich ciągów znaków */
+    .subtitle {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+
+    /* KONTAKT: Pionowy układ dla wygody */
+    .content ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #222;
+        padding-bottom: 10px;
+    }
+
+    .content ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* Linki w kontakcie mogą się łamać */
+    .content ul li a {
+        word-break: break-all;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    /* Przyciski i nawigacja */
+    nav a {
+        min-height: 44px; /* Łatwiej trafić palcem */
+        display: flex;
+        align-items: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
