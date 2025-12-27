@@ -19,8 +19,8 @@ body {
     background-size: cover;
     color: #00ff00;
     line-height: 1.6;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
     padding: 20px;
     min-height: 100vh;
     border-left: 1px solid #333;
