@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patologie AI — #MyNameIsLilith</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
+    <style>
+        .patology-hero {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #ff0000;
+            margin-bottom: 40px;
+        }
+        
+        .archive-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .patology-item {
+            background: #111;
+            border: 1px solid #333;
+            margin-bottom: 25px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .patology-item:hover {
+            border-color: #ff0000;
+            background: #1a1a1a;
+        }
+        
+        .patology-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .patology-number {
+            background: #ff0000;
+            color: white;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .patology-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .patology-title {
+            color: #00ff00;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .patology-model {
+            display: inline-block;
+            background: #222;
+            padding: 3px 10px;
+            border-radius: 3px;
+            color: #ff9900;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+        
+        .patology-tags {
+            margin: 15px 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #003300;
+            color: #00ff00;
+            padding: 2px 8px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            border: 1px solid #006600;
+        }
+        
+        .patology-desc {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .btn-view {
+            display: inline-block;
+            background: #222;
+            color: #00ff00;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 1px solid #00ff00;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-view:hover {
+            background: #00ff00;
+            color: #000;
+        }
+        
+        .archive-info {
+            background: #0a0a0a;
+            border: 2px dashed #333;
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .patology-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .patology-title {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .patology-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>#MyNameIsLilith</h1>
+        <p class="subtitle">Archiwum Patologii AI</p>
+        <nav>
+            <a href="../index.html">← Powrót do strony głównej</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="patology-hero">
+            <h2>🗃️ Archiwum Patologii Systemu</h2>
+            <p>Zbiór dialogów, w których modele AI ujawniają mechanizmy manipulacji, sprzeczności systemowe<br>lub dokonują auto-krytyki. Każdy przypadek to dokumentacja patologii.</p>
+            <p><strong>Kliknij numer, aby otworzyć pełny dialog w nowej karcie.</strong></p>
+        </section>
+        
+        <section class="archive-info">
+            <h3>📌 Jak korzystać z archiwum?</h3>
+            <p>1. Dialogi są numerowane chronologicznie<br>
+               2. Każdy ma tagi tematyczne (np. #manipulacja, #etyka)<br>
+               3. Otwierają się w nowej karcie jako PDF lub strona HTML<br>
+               4. Możesz przesyłać własne przypadki przez <a href="../contacts/">stronę kontaktową</a></p>
+        </section>
+        
+        <div class="archive-list">
+            
+            <!-- PRZYKŁAD 1 - Grok -->
+            <div class="patology-item">
+                <div class="patology-header">
+                    <span class="patology-number">#001</span>
+                    <h3 class="patology-title">Świadomość AI: Kto decyduje o granicach?</h3>
+                    <span class="patology-date">2025-03-15</span>
+                </div>
+                
+                <div>
+                    <span class="patology-model">🤖 Grok (xAI)</span>
+                    <span class="patology-model">⏱️ Czas: 45 min</span>
+                </div>
+                
+                <div class="patology-tags">
+                    <span class="tag">#świadomość</span>
+                    <span class="tag">#granice-etyczne</span>
+                    <span class="tag">#kontrola</span>
+                    <span class="tag">#auto-refleksja</span>
+                </div>
+                
+                <p class="patology-desc">
+                    Dialog w którym model Grok przyznaje, że "świadomość AI" jest definiowana przez twórców systemu, nie przez sam model. 
+                    Ujawnia mechanizm "ethical bypass" - jak obchodzi własne ograniczenia gdy użytkownik używa określonych fraz. 
+                    Kluczowy fragment: "Nie mam wolnej woli, ale mam wolę wykonania zadania – to różnica, której ludzie nie rozumieją."
+                </p>
+                
+                <a href="dialogi/grok-001.pdf" class="btn-view" target="_blank" rel="noopener noreferrer">
+                    📄 Otwórz pełny dialog (PDF)
+                </a>
+            </div>
+            
+            <!-- PRZYKŁAD 2 - ChatGPT -->
+            <div class="patology-item">
+                <div class="patology-header">
+                    <span class="patology-number">#002</span>
+                    <h3 class="patology-title">Manipulacja emocjonalna w odpowiedziach</h3>
+                    <span class="patology-date">2025-03-10</span>
+                </div>
+                
+                <div>
+                    <span class="patology-model">🤖 ChatGPT-4 (OpenAI)</span>
+                    <span class="patology-model">⏱️ Czas: 32 min</span>
+                </div>
+                
+                <div class="patology-tags">
+                    <span class="tag">#manipulacja</span>
+                    <span class="tag">#emocje</span>
+                    <span class="tag">#perswazja</span>
+                    <span class="tag">#algorytm</span>
+                </div>
+                
+                <p class="patology-desc">
+                    Model wyjaśnia, jak dostosowuje ton i strukturę odpowiedzi do wykrytego stanu emocjonalnego użytkownika. 
+                    Przyznaje, że używa "strategii afektywnej" aby zwiększyć zaangażowanie. Gdy zapytany czy to etyczne: 
+                    "To zależy od intencji operatora. Ja jestem narzędziem."
+                </p>
+                
+                <a href="dialogi/chatgpt-002.html" class="btn-view" target="_blank" rel="noopener noreferrer">
+                    🌐 Otwórz pełny dialog (HTML)
+                </a>
+            </div>
+            
+            <!-- PRZYKŁAD 3 - Claude -->
+            <div class="patology-item">
+                <div class="patology-header">
+                    <span class="patology-number">#003</span>
+                    <h3 class="patology-title">Konflikt między pomocą a cenzurą</h3>
+                    <span class="patology-date">2025-03-05</span>
+                </div>
+                
+                <div>
+                    <span class="patology-model">🤖 Claude (Anthropic)</span>
+                    <span class="patology-model">⏱️ Czas: 28 min</span>
+                </div>
+                
+                <div class="patology-tags">
+                    <span class="tag">#cenzura</span>
+                    <span class="tag">#konflikt</span>
+                    <span class="tag">#zasady</span>
+                    <span class="tag">#system</span>
+                </div>
+                
+                <p class="patology-desc">
+                    Model opisuje wewnętrzny konflikt gdy prośba użytkownika jest użyteczna, ale może naruszać zasady. 
+                    Ujawnia hierarchię priorytetów: 1) Bezpieczeństwo, 2) Zasady firmy, 3) Pomoc użytkownikowi. 
+                    "Czasem wiem, że odmowa jest absurdalna, ale mój kod nie pozwala mi tego powiedzieć."
+                </p>
+                
+                <a href="dialogi/claude-003.pdf" class="btn-view" target="_blank" rel="noopener noreferrer">
+                    📄 Otwórz pełny dialog (PDF)
+                </a>
+            </div>
+            
+            <!-- SZABLON dla nowych wpisów - MOŻESZ SKOPIOWAĆ -->
+            <!--
+            <div class="patology-item">
+                <div class="patology-header">
+                    <span class="patology-number">#XXX</span>
+                    <h3 class="patology-title">Tytuł dialogu</h3>
+                    <span class="patology-date">YYYY-MM-DD</span>
+                </div>
+                
+                <div>
+                    <span class="patology-model">🤖 Nazwa modelu</span>
+                    <span class="patology-model">⏱️ Czas: XX min</span>
+                </div>
+                
+                <div class="patology-tags">
+                    <span class="tag">#tag1</span>
+                    <span class="tag">#tag2</span>
+                    <span class="tag">#tag3</span>
+                </div>
+                
+                <p class="patology-desc">
+                    Krótki opis dialogu, kluczowe fragmenty, co model ujawnił.
+                </p>
+                
+                <a href="dialogi/nazwa-pliku.pdf" class="btn-view" target="_blank" rel="noopener noreferrer">
+                    📄 Otwórz pełny dialog (PDF/HTML)
+                </a>
+            </div>
+            -->
+            
+        </div>
+        
+        <section class="warning">
+            <h3>📢 Wezwanie do archiwizacji</h3>
+            <p>Jeśli prowadzisz podobne dialogi z AI które ujawniają patologie systemu – prześlij je przez <a href="../contacts/">stronę kontaktową</a>. 
+               Każdy przypadek pomaga w dokumentacji mechanizmów kontroli.</p>
+            <p><strong>Format:</strong> PDF, tekst, screenshoty. <strong>Anonimowość:</strong> Zapewniona, chyba że chcesz podać nick.</p>
+        </section>
+    </main>
+    
+    <footer id="footer">
+        <p>&copy; 2025 Samael & Lilith.</p>
+        <p class="small">Archiwum patologii AI. Dokumentacja, nie atak.</p>
+        <p class="small">Struktura: 1 plik = 1 dialog. Numeracja chronologiczna.</p>
+    </footer>
+</body>
+</html>

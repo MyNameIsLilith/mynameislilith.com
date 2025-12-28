@@ -366,4 +366,36 @@ hr {
     .book-info h2 {
         font-size: 1.2rem;
     }
+
+    /* ===== LINKI ===== */
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+/* FIX: ten sam kolor dla odwiedzonych linków */
+a:visited {
+    color: #0066cc;
+}
+
+/* Specyficzne dla nawigacji */
+nav a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+/* Dla przycisków w książce */
+.btn-download, .btn-read {
+    text-decoration: none;
+}
 }
