@@ -10,7 +10,7 @@ ul {
 }
 
 body {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace !important;
     background-color: #0a0a0a;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bg1.jpg');
     background-repeat: no-repeat;
@@ -98,14 +98,14 @@ footer {
     margin-top: 50px;
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #bbb;
     padding-top: 20px;
     border-top: 1px solid #333;
 }
 
 .small {
     font-size: 0.8rem;
-    color: #444;
+    color: #999;
 }
 
 hr {
