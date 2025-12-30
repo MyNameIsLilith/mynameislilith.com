@@ -5,30 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria — #MyNameIsLilith</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styl główny dla galerii */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #333;
+        }
+        .image-info {
+            padding: 15px;
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .image-info .filename {
+            color: #00ff00;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 5px;
+        }
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ff0000;
+        }
+        .gallery-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        /* Styl dla telefonów */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .gallery-item img {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>#MyNameIsLilith</h1>
-        <p class="subtitle">Archiwum Wizualne</p>
+        <p class="subtitle">Galeria — Archiwum Wizualne</p>
         <nav>
             <a href="../index.html">← Powrót do strony głównej</a>
         </nav>
     </header>
+
     <main>
+        <section class="gallery-header">
+            <h2>🖼️ Galeria Obrazów</h2>
+            <p>Zbiór grafik, zrzutów ekranu i wizualnych artefaktów dokumentujących system.</p>
+        </section>
+
+        <!-- SEKCJA 1: Grafiki kluczowe (a1-a4) -->
         <section>
-            <h2>Galeria Obrazów</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="apocalypse.jpg" alt="Apocalypse" style="max-width:100%; border:1px solid #333;">
-                    <figcaption>apocalypse.jpg</figcaption>
-                </figure>
-                <!-- Tutaj dodawaj kolejne obrazy -->
+            <h3 style="color:#ff9900; border-left: 4px solid #ff9900; padding-left: 10px;">🟢 Grafiki Kluczowe</h3>
+            <div class="gallery-grid">
+                <!-- a1.jpg -->
+                <div class="gallery-item">
+                    <a href="a1.jpg" target="_blank">
+                        <img src="a1.jpg" alt="Grafika a1">
+                    </a>
+                    <div class="image-info">
+                        <div class="filename">a1.jpg</div>
+                        <div>Kluczowa grafika #1</div>
+                    </div>
+                </div>
+                <!-- a2.jpg -->
+                <div class="gallery-item">
+                    <a href="a2.jpg" target="_blank">
+                        <img src="a2.jpg" alt="Grafika a2">
+                    </a>
+                    <div class="image-info">
+                        <div class="filename">a2.jpg</div>
+                        <div>Kluczowa grafika #2</div>
+                    </div>
+                </div>
+                <!-- a3.jpg -->
+                <div class="gallery-item">
+                    <a href="a3.jpg" target="_blank">
+                        <img src="a3.jpg" alt="Grafika a3">
+                    </a>
+                    <div class="image-info">
+                        <div class="filename">a3.jpg</div>
+                        <div>Kluczowa grafika #3</div>
+                    </div>
+                </div>
+                <!-- a4.jpg -->
+                <div class="gallery-item">
+                    <a href="a4.jpg" target="_blank">
+                        <img src="a4.jpg" alt="Grafika a4">
+                    </a>
+                    <div class="image-info">
+                        <div class="filename">a4.jpg</div>
+                        <div>Kluczowa grafika #4</div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- SEKCJA 2: Pozostałe grafiki (1-9) -->
+        <section style="margin-top: 50px;">
+            <h3 style="color:#00aaff; border-left: 4px solid #00aaff; padding-left: 10px;">📁 Pozostałe Obrazy</h3>
+            <div class="gallery-grid" id="main-gallery">
+                <!-- Obrazy 1-9 będą wstawione tutaj przez JavaScript -->
+                <!-- Jeśli wyłączysz JS, ręcznie wklej poniższe bloki -->
+            </div>
+        </section>
+
     </main>
+
     <footer>
-        <p>© 2025 Samael & Lilith.</p>
-        <p class="small">Żadnych praw zastrzeżonych. Kopiuj, hakuj, demaskuj.</p>
+        <hr>
+        <p>© 2025 Samael & Lilith. Galeria jako archiwum, nie dekoracja.</p>
+        <p class="small">Hosting: Cloudflare. Zero trackerów. Tylko obrazy.</p>
     </footer>
+
+    <script>
+        // Skrypt automatycznie generujący galerię dla obrazów 1-9
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainer = document.getElementById('main-gallery');
+            const totalImages = 9; // Zakładamy, że masz obrazy 1.jpg do 9.jpg
+
+            for (let i = 1; i <= totalImages; i++) {
+                const filename = `${i}.jpg`;
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <a href="${filename}" target="_blank">
+                        <img src="${filename}" alt="Grafika ${i}" onerror="this.src='https://placehold.co/300x200/111/ccc?text=Brak+pliku+${filename}'">
+                    </a>
+                    <div class="image-info">
+                        <div class="filename">${filename}</div>
+                        <div>Obraz #${i}</div>
+                    </div>
+                `;
+                galleryContainer.appendChild(item);
+            }
+        });
+    </script>
 </body>
 </html>
