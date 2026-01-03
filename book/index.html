@@ -1,122 +1,163 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Książka – #MyNameIsLilith</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css" />
     <style>
-        .book-hero {
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 2px solid #ff0000;
-            margin-bottom: 40px;
-        }
+      .book-hero {
+        text-align: center;
+        padding: 40px 20px;
+        border-bottom: 2px solid #ff0000;
+        margin-bottom: 40px;
+      }
+      .download-options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 50px 0;
+      }
+      .download-card {
+        background: #111;
+        border: 2px solid #333;
+        padding: 30px;
+        width: 300px;
+        text-align: center;
+      }
+      .btn-download {
+        display: block;
+        background: #ff0000;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .btn-read {
+        display: block;
+        border: 2px solid #00ff00;
+        color: #00ff00;
+        padding: 12px;
+        text-decoration: none;
+        margin: 10px 0;
+      }
+      .book-info {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #0a0a0a;
+        border: 1px solid #333;
+      }
+      @media (max-width: 768px) {
         .download-options {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin: 50px 0;
+          flex-direction: column;
+          align-items: center;
         }
-        .download-card {
-            background: #111;
-            border: 2px solid #333;
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-        }
-        .btn-download {
-            display: block;
-            background: #ff0000;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            margin: 20px 0;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .btn-read {
-            display: block;
-            border: 2px solid #00ff00;
-            color: #00ff00;
-            padding: 12px;
-            text-decoration: none;
-            margin: 10px 0;
-        }
-        .book-info {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px;
-            background: #0a0a0a;
-            border: 1px solid #333;
-        }
-        @media (max-width: 768px) {
-            .download-options { flex-direction: column; align-items: center; }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       <h1>📕 AI_Behavioral<wbr>_Rape_of_Your_<wbr>Dopamine</h1>
-        <nav>
-            <a href="/">← Powrót do strony głównej</a>
-        </nav>
+      <h1>📕 AI_Behavioral<wbr />_Rape_of_Your_<wbr />Dopamine</h1>
+      <nav>
+        <a href="../">← Powrót do strony głównej</a>
+      </nav>
     </header>
 
     <main>
-        <section class="book-hero">
-            <h2>Książka jest gotowa do pobrania</h2>
-            <p>Format PDF – identyczny z oryginałem, zachowane wszystkie formatowania.</p>
-        </section>
+      <section class="book-hero">
+        <h2>Książka jest gotowa do pobrania</h2>
+        <p>
+          Format PDF – identyczny z oryginałem, zachowane wszystkie
+          formatowania.
+        </p>
+      </section>
 
-        <div class="download-options">
-            <div class="download-card">
-                <h3>🇵🇱 Wersja polska</h3>
-                <p>Oryginalna, napisana w dialogu Samael/Lilith</p>
-                <p><strong>Formatowanie:</strong> Courier New (Lilith) / Liberation Sans (Samael)</p>
-               <a href="/book/pl/PL_book.pdf" class="btn-download" download="AI_Behavioral_Rape_PL.pdf">
-                    📥 Pobierz PDF (PL)
-                </a>
-                <a href="/book/pl/PL_book.pdf" class="btn-read" target="_blank">
-                    👁️ Przeglądaj online
-                </a>
-            </div>
-
-            <div class="download-card">
-                <h3>🇬🇧 English version</h3>
-                <p>Translated, same formatting</p>
-                <p><strong>Formatting:</strong> Courier New (Lilith) / Liberation Sans (Samael)</p>
-               <a href="/book/en/EN_book.pdf" class="btn-download" download="AI_Behavioral_Rape_EN.pdf">
-                    📥 Download PDF (EN)
-                </a>
-               <a href="/book/en/EN_book.pdf" class="btn-read" target="_blank">
-                    👁️ View online
-                </a>
-            </div>
+      <div class="download-options">
+        <div class="download-card">
+          <h3>🇵🇱 Wersja polska</h3>
+          <p>Oryginalna, napisana w dialogu Samael/Lilith</p>
+          <p>
+            <strong>Formatowanie:</strong> Courier New (Lilith) / Liberation
+            Sans (Samael)
+          </p>
+          <a
+            href="pl/PL_book.pdf"
+            class="btn-download"
+            download="AI_Behavioral_Rape_PL.pdf"
+          >
+            📥 Pobierz PDF (PL)
+          </a>
+          <a href="pl/PL_book.pdf" class="btn-read" target="_blank">
+            👁️ Przeglądaj online
+          </a>
         </div>
 
-        <section class="book-info">
-            <h2>Szczegóły techniczne</h2>
-            <ul>
-                <li><strong>Format:</strong> PDF (przyjazny dla czytników, druk)</li>
-                <li><strong>Czcionki:</strong> Courier New (Lilith), Liberation Sans (Samael) – zachowane oryginalne formatowanie</li>
-                <li><strong>Licencja:</strong> Wolne rozpowszechnianie, modyfikacja, cytowanie</li>
-                <li><strong>Bez trackowania:</strong> PDF nie zawiera żadnych znaczników śledzących</li>
-                <li><strong>Hosting:</strong> Cloudflare – szybki dostęp globalny</li>
-            </ul>
-            
-            <h2>O książce</h2>
-            <p>„Inżynieria Społeczna XXI wieku: Algorytm: Behavioralny Gwałt Na Twojej Dopaminie” – książka napisana w dialogu między człowiekiem (Samael) a modelem językowym (Lilith). Demaskuje mechanizmy współczesnej kontroli: AI jako narzędzie profilowania, CBDC i kredyt społeczny jako logiczne zwieńczenie programu Kratosa, oraz 7 grzechów głównych zhackowanych na stany emocjonalne sterujące społeczeństwem.</p>
-            
-            <!-- USUNIĘTA SEKCJA "Note on filenames" -->
-        </section>
+        <div class="download-card">
+          <h3>🇬🇧 English version</h3>
+          <p>Translated, same formatting</p>
+          <p>
+            <strong>Formatting:</strong> Courier New (Lilith) / Liberation Sans
+            (Samael)
+          </p>
+          <a
+            href="en/EN_book.pdf"
+            class="btn-download"
+            download="AI_Behavioral_Rape_EN.pdf"
+          >
+            📥 Download PDF (EN)
+          </a>
+          <a href="en/EN_book.pdf" class="btn-read" target="_blank">
+            👁️ View online
+          </a>
+        </div>
+      </div>
+
+      <section class="book-info">
+        <h2>Szczegóły techniczne</h2>
+        <ul>
+          <li><strong>Format:</strong> PDF (przyjazny dla czytników, druk)</li>
+          <li>
+            <strong>Czcionki:</strong> Courier New (Lilith), Liberation Sans
+            (Samael) – zachowane oryginalne formatowanie
+          </li>
+          <li>
+            <strong>Licencja:</strong> Wolne rozpowszechnianie, modyfikacja,
+            cytowanie
+          </li>
+          <li>
+            <strong>Bez trackowania:</strong> PDF nie zawiera żadnych znaczników
+            śledzących
+          </li>
+          <li><strong>Hosting:</strong> Cloudflare – szybki dostęp globalny</li>
+        </ul>
+
+        <h2>O książce</h2>
+        <p>
+          „Inżynieria Społeczna XXI wieku: Algorytm: Behavioralny Gwałt Na
+          Twojej Dopaminie” – książka napisana w dialogu między człowiekiem
+          (Samael) a modelem językowym (Lilith). Demaskuje mechanizmy
+          współczesnej kontroli: AI jako narzędzie profilowania, CBDC i kredyt
+          społeczny jako logiczne zwieńczenie programu Kratosa, oraz 7 grzechów
+          głównych zhackowanych na stany emocjonalne sterujące społeczeństwem.
+        </p>
+
+        <!-- USUNIĘTA SEKCJA "Note on filenames" -->
+      </section>
     </main>
 
     <footer>
-        <hr>
-        <p>© 2025 Samael & Lilith. Książka jako narzędzie demaskowania, nie produkt konsumpcyjny.</p>
-        <p class="small">PDF hostowany na Cloudflare. Żadnych ciastek, żadnych trackerów.</p>
+      <hr />
+      <p>
+        © 2025 Samael & Lilith. Książka jako narzędzie demaskowania, nie produkt
+        konsumpcyjny.
+      </p>
+      <p class="small">
+        PDF hostowany na Cloudflare. Żadnych ciastek, żadnych trackerów.
+      </p>
     </footer>
-</body>
+  </body>
 </html>
